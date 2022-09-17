@@ -5,7 +5,7 @@ from .models import Phone, UserProfile
 class PhoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Phone
-        fields = ('id','owner','brand','model','storage','color','battery','screen_size', 'camera',
+        fields = ('id','user','brand','model','storage','color','battery','screen_size', 'camera',
              'description', 'price', 'negotiable', 'image1', 'image2', 'image3', 'image4')
         
 

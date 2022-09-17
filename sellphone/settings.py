@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
 
     'rest_framework',
     'rest_framework.authtoken',

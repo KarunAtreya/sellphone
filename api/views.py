@@ -13,7 +13,7 @@ class PhoneViewSet(viewsets.ModelViewSet):
     serializer_class = PhoneSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsUserOrReadOnly,)
+    permission_classes = (IsUserOrReadOnly,IsAuthenticatedOrReadOnly)
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
 

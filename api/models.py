@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
+from django_elasticsearch_dsl_drf.wrappers import dict_to_obj
 
 
 def upload_to(instance, filename):
@@ -9,7 +10,7 @@ def upload_to(instance, filename):
 
 
 class Phone(models.Model):
-    owner = models.ForeignKey(User, on_delete = models.CASCADE)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
     brand = models.CharField(max_length=25)
     model = models.CharField(max_length=25)
     storage = models.IntegerField() 
@@ -27,7 +28,20 @@ class Phone(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f'{self.id} : {self.brand} {self.model} Posted by {self.owner.username}'
+        return f'{self.id} : {self.brand} {self.model} Posted by {self.user.username}'
+    
+    class Meta:
+        ordering = ['id']
+
+    @property
+    def user_indexing(self):
+        wrapper = dict_to_obj({
+            'id': self.user.id,
+            'username': self.user.username,
+        })
+
+        return wrapper
+
 
 
 class UserProfile(models.Model):
