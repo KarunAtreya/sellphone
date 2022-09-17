@@ -42,7 +42,6 @@ class PhoneDocument(Document):
     image1 = fields.FileField()
 
     brand = fields.TextField(
-        analyzer=html_strip,
         fields={
             'raw': fields.TextField(analyzer='keyword',),
             'suggest': fields.CompletionField(),
