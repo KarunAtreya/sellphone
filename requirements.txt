@@ -11,7 +11,7 @@ dj-database-url==1.0.0
 dj-rest-auth==2.2.5
 Django==4.1
 django-allauth==0.51.0
-django-elasticsearch-dsl
+django-elasticsearch-dsl==7.2.2 
 django-elasticsearch-dsl-drf==0.22.5
 django-heroku==0.3.1
 django-nine==0.2.5
@@ -19,7 +19,7 @@ djangorestframework==3.13.1
 drf-yasg==1.21.3
 elastic-transport==8.4.0
 elasticsearch==7.17.6
-elasticsearch-dsl
+elasticsearch-dsl=7.2.0<8.0.0
 filelock==3.8.0
 gunicorn==20.1.0
 heroku==0.1.4
