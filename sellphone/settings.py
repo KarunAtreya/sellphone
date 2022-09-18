@@ -158,6 +158,8 @@ SITE_ID = 1
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'localhost:9200'
+        'hosts': 'https://elastic:yt20FQ8v1a9YKCPqhbo6LatI@sellphoneelasticsearch.es.asia-south1.gcp.elastic-cloud.com',
+        # 'username':'elastic',
+        # 'password':'yt20FQ8v1a9YKCPqhbo6LatI'
     },
 }

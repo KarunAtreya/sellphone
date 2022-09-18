@@ -11,5 +11,10 @@ class PhoneAdmin(admin.ModelAdmin):
     search_fields = ('brand',)
 
 
+@admin.register(UserProfile)
+class UserProfile(admin.ModelAdmin):
 
-admin.site.register(UserProfile)
+    """User Admin"""
+    list_display = ('user', 'phone_number','location','profile_pic')
+    search_fields = ('user.name',)
+
