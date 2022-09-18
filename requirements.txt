@@ -19,7 +19,7 @@ djangorestframework==3.13.1
 drf-yasg==1.21.3
 elastic-transport==8.4.0
 elasticsearch==7.17.6
-elasticsearch-dsl==7.4.0
+elasticsearch-dsl>=5.0,<6.0
 filelock==3.8.0
 gunicorn==20.1.0
 heroku==0.1.4
@@ -38,7 +38,6 @@ pycparser==2.21
 PyJWT==2.4.0
 pyparsing==3.0.9
 python-dateutil==1.5
-python-dateutil
 python3-openid==3.2.0
 pytz==2022.2.1
 PyYAML==6.0
