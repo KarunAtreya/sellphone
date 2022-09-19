@@ -19,7 +19,7 @@ djangorestframework==3.13.1
 drf-yasg==1.21.3
 elastic-transport==8.4.0
 elasticsearch==7.14.0
-elasticsearch-dsl=7.4.0
+elasticsearch-dsl==7.4.0
 filelock==3.8.0
 gunicorn==20.1.0
 heroku==0.1.4
