@@ -17,6 +17,7 @@ django-heroku==0.3.1
 django-nine==0.2.5
 djangorestframework==3.13.1
 drf-yasg==1.21.3
+django-utils-six
 elastic-transport==8.4.0
 elasticsearch
 elasticsearch-dsl==5.4.0
