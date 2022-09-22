@@ -7,18 +7,18 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 class PhoneViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsAuthorOrReadOnly, IsAuthenticatedOrReadOnly)
+    # permission_classes = (IsAuthorOrReadOnly, IsAuthenticatedOrReadOnly)
     parser_classes =[MultiPartParser, FormParser]
     queryset = Phone.objects.all()
     serializer_class = PhoneSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsUserOrReadOnly,IsAuthenticatedOrReadOnly)
+    # permission_classes = (IsUserOrReadOnly,IsAuthenticatedOrReadOnly)
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
 
 class UserProfileViewSet(viewsets.ModelViewSet):
-    permission_classes = (IsUserOrReadOnly1, IsAuthenticatedOrReadOnly)
+    # permission_classes = (IsUserOrReadOnly1, IsAuthenticatedOrReadOnly)
     parser_classes =[MultiPartParser, FormParser]
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
